@@ -16,7 +16,7 @@ const queue: TreeNode[] = [];
 
 function invertTree(root: TreeNode | null): TreeNode | null {
     queue.push(root);
-    while (queue.length != 0) {
+    while (queue.length) {  // 0 is false
         const node = queue.shift();
         if (node) {
             swap(node);
